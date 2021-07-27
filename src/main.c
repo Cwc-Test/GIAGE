@@ -1,7 +1,7 @@
 #define SOKOL_IMPL
-#include "Sokol/sokol_app.h"
-#include "Sokol/sokol_gfx.h"
-#include "Sokol/sokol_glue.h"
+#include "libs/Sokol/sokol_app.h"
+#include "libs/Sokol/sokol_gfx.h"
+#include "libs/Sokol/sokol_glue.h"
 
 
 

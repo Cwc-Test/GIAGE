@@ -1,13 +1,22 @@
+>
+-{_sOpt}="Debug"
 -{vIncl}=
 -I libs/
 > 
+-{pExtLib}=libs/
+-{pOut}=_out/{_sPlatform}_{_sOpt}/
+-{pObj}= obj/{_sPlatform}_{_sOpt}/
+>
 -{vFlag}=
 -DSOKOL_GLCORE33
 >
--c src/main.c -o obj/test.o
--{vIncl} -{vFlag}
+-c libs/imgui/ 
+-c src/main.c 
+-I {pExtLib}imgui/
+-{vIncl} 
+-{vFlag}
 >
--o obj/ -#To out/App.* -lgdi32
+-o obj/ -#To {pOut}App.* -lgdi32
 >
 -#Run
 >

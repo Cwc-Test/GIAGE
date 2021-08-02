@@ -11,7 +11,7 @@
 -DSOKOL_GLCORE33
 >
 -c libs/imgui/ 
--c src/main.c 
+-c src/main.cpp 
 -I {pExtLib}imgui/
 -{vIncl} 
 -{vFlag}

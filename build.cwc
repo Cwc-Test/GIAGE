@@ -10,6 +10,7 @@
 -{pObj}= obj/{_sPlatform}_{_sOpt}/
 >
 -{vFlag}=
+	-DSOKOL_IMPL
 	-DSOKOL_GLCORE33
 >
 ;Compile GIAGE
@@ -20,7 +21,7 @@
 -c &libs/imgui/ -o {pObj}
 	-{vIncl} 
 	-{vFlag}
-	
+>
 ;Link
 -o {pObj} -#To {pOut}App.* -lgdi32
 >

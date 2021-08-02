@@ -1,7 +1,8 @@
 >
 -{_sOpt}="Debug"
--{vIncl}=
--I libs/
+-{vIncl}= 	-I {pExtLib}imgui/
+			-I {pExtLib}Sokol/
+			-I {pExtLib}Sokol/util/
 > 
 -{pExtLib}=libs/
 -{pOut}=_out/{_sPlatform}_{_sOpt}/
@@ -10,13 +11,19 @@
 -{vFlag}=
 -DSOKOL_GLCORE33
 >
--c libs/imgui/ 
--c src/main.cpp 
--I {pExtLib}imgui/
--{vIncl} 
--{vFlag}
+;Compile GIAGE
+-c src/
+		-{vIncl} 
+		-{vFlag}
+	-o {pObj}
 >
--o obj/ -#To {pOut}App.* -lgdi32
+;Compile ImGUI
+-c libs/imgui/
+		-{vIncl} 
+		-{vFlag}
+	-o {pObj}
+;Link
+-o {pObj} -#To {pOut}App.* -lgdi32
 >
 -#Run
 >

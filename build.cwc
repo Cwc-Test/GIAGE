@@ -17,7 +17,7 @@
 	-{vIncl} -{vFlag}
 >
 ;Compile ImGUI
--c libs/imgui/ -o {pObj}
+-c &libs/imgui/ -o {pObj}
 	-{vIncl} 
 	-{vFlag}
 	
